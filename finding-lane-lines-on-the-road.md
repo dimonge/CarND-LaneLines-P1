@@ -29,19 +29,19 @@ The steps used to find the lanes are as follows:
 
 I started by transforming the image using the grayscale transform function to convert the image to one color. Then we applied the Gaussian Noise kernel to blur the images.
 
-![gray image]({{site.baseurl}}/./gray_result/output_whiteCarLaneSwitch.jpg)
+[gray image]: ./gray_result/output_whiteCarLaneSwitch.jpg
 
 Then I extract the edges in the images using the Canny edges transform. Canny Edges transform is used to detect the edges in an image.
 
-![edges image]({{site.baseurl}}/./edges_result/output_whiteCarLaneSwitch.jpg)
+[edges image]: ./edges_result/output_whiteCarLaneSwitch.jpg
 
 Now, the images shows only lines which makes it easy to identify the area of interests (using region_of_interest()) in the image.
 
-![region_of_interest]({{site.baseurl}}/./region_of_interest_result/output_whiteCarLaneSwitch.jpg)
+[region_of_interest]: ./region_of_interest_result/output_whiteCarLaneSwitch.jpg
 
 Hough transform function is applied to the images to draw the hough lines.
 
-![hough line]({{site.baseurl}}/./result/output_whiteCarLaneSwitch.jpg)
+[hough line]: ./result/output_whiteCarLaneSwitch.jpg
 
 To extrapolate to line segments,
 
