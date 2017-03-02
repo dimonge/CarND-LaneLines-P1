@@ -1,15 +1,14 @@
-#**Finding Lane Lines on the Road**
+# **Finding Lane Lines on the Road**
 
-##Introduction
+## Introduction
 
 For self-driving car to know where the lanes are on the road, It will need to be able to view the environment. Companies has developed hardware to provide a means for these.
 
 In this project, I will provide the pipeline function for detecting lane line on the road in provided images and video.
 
-
 ---
 
-**Finding Lane Lines on the Road**
+## **Finding Lane Lines on the Road**
 
 The steps used to find the lanes are as follows:
 
@@ -25,8 +24,6 @@ The steps used to find the lanes are as follows:
 
 ### Pipeline
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
-
 I started by transforming the image using the grayscale transform function to convert the image to one color. Then we applied the Gaussian Noise kernel to blur the images.
 
 [gray image]: ./gray_result/output_whiteCarLaneSwitch.jpg
@@ -41,20 +38,17 @@ Now, the images shows only lines which makes it easy to identify the area of int
 
 Hough transform function is applied to the images to draw the hough lines.
 
+[hough line]: ./images_with_lanes_lines_before_extrapolation/output_whiteCarLaneSwitch.jpg
+
+To extrapolate to line segments, we separate the lines into groups of positive and negative gradient, then taking the average of the intercept and gradient value. Then we get the lanes lines from the output.
 [hough line]: ./result/output_whiteCarLaneSwitch.jpg
 
-To extrapolate to line segments,
-
-###2. Identify potential shortcomings with your current pipeline
+### Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ...
-
-Another shortcoming could be ...
+After testing the pipeline on the optional challenge videos, the extrapolated line segments couldn't detect the line when the car was in the curve.  
 
 
-###3. Suggest possible improvements to your pipeline
+### Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+Improving the hough transform function to better work with various kind of the images.
