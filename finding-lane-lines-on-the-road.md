@@ -26,7 +26,7 @@ The steps used to find the lanes are as follows:
 
 I started by transforming the image using the grayscale transform function to convert the image to one color. Then we applied the Gaussian Noise kernel to blur the images.
 
-[gray image]: ./gray_result/output_whiteCarLaneSwitch.jpg
+![gray image] (./gray_result/output_whiteCarLaneSwitch.jpg)
 
 Then I extract the edges in the images using the Canny edges transform. Canny Edges transform is used to detect the edges in an image.
 
